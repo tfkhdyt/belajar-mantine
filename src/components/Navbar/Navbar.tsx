@@ -12,7 +12,11 @@ export default function MyNavbar({ opened }: { opened: boolean }) {
     >
       {data &&
         data.menu.map((menu, index) => (
-          <Link href={`${menu.replaceAll(' ', '-').toLowerCase()}`} key={index}>
+          <Link
+            href={`${menu.replaceAll(' ', '-').toLowerCase()}`}
+            key={index}
+            passHref
+          >
             <Text component='a'>{menu}</Text>
           </Link>
         ))}

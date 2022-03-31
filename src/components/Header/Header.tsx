@@ -28,7 +28,7 @@ export default function MyHeader({
             mr='xl'
           />
         </MediaQuery>
-        <Link href='/'>
+        <Link href='/' passHref>
           <Text component='a'>Belajar Mantine</Text>
         </Link>
       </div>
