@@ -1,18 +1,6 @@
 import { Navbar, Text } from '@mantine/core'
-import fs from 'fs'
-import path from 'path'
-
-export async function getStaticProps() {
-  const pagesDirectory = path.join(process.cwd(), 'pages')
-  const pages = fs.readdirSync(pagesDirectory)
-  console.log(pages)
-
-  return {
-    props: {
-      pages,
-    },
-  }
-}
+import Link from 'next/link'
+import data from './data'
 
 export default function MyNavbar({ opened }: { opened: boolean }) {
   return (
@@ -22,9 +10,12 @@ export default function MyNavbar({ opened }: { opened: boolean }) {
       hidden={!opened}
       width={{ sm: 200, lg: 300 }}
     >
-      <Text>Belajar Mantine</Text>
-      <Text>Belajar Mantine</Text>
-      <Text>Belajar Mantine</Text>
+      {data &&
+        data.menu.map((menu, index) => (
+          <Link href={`${menu.replaceAll(' ', '-').toLowerCase()}`} key={index}>
+            <Text component='a'>{menu}</Text>
+          </Link>
+        ))}
     </Navbar>
   )
 }

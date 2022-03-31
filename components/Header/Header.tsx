@@ -5,6 +5,7 @@ import {
   Text,
   useMantineTheme,
 } from '@mantine/core'
+import Link from 'next/link'
 import { Dispatch, SetStateAction } from 'react'
 
 export default function MyHeader({
@@ -27,8 +28,9 @@ export default function MyHeader({
             mr='xl'
           />
         </MediaQuery>
-
-        <Text>Belajar Mantine</Text>
+        <Link href='/'>
+          <Text component='a'>Belajar Mantine</Text>
+        </Link>
       </div>
     </Header>
   )
