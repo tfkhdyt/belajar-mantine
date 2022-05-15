@@ -26,6 +26,7 @@ specifiers:
   prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
+  tabler-icons-react: ^1.48.0
   typescript: 4.6.4
 
 dependencies:
@@ -45,6 +46,7 @@ dependencies:
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  tabler-icons-react: 1.48.0_react@18.1.0
 
 devDependencies:
   '@types/node': 17.0.33
@@ -2596,6 +2598,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /tabler-icons-react/1.48.0_react@18.1.0:
+    resolution: {integrity: sha512-dlcAIGYIB7+fsU1tj8HuK5aN57g3Q5KD8GMAxpBR9E62yFhjn8fbwD2M2X18E66v5TYakUhu6tfUxM+/jvI6Kg==}
+    peerDependencies:
+      react: '>= 16.8.0'
+    dependencies:
+      react: 18.1.0
+    dev: false
 
   /text-table/0.2.0:
     resolution: {integrity: sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=}
